@@ -1,12 +1,10 @@
-
 // listen to click on the body of the web page
 document.querySelector('body').addEventListener('click' , async evt => {
   // if this is not a link, we skip it
   const link = evt.target;
   if (link.tagName !== 'A') return;
   // if this link is absolute we skip it
-  let href = link.getAttribute('href');
-  console.log(href);
+  let href = link.getAttribute('href');  
   if (href.startsWith('http://') || href.startsWith('https://')) return;
   // disdable the default behavoir of the link
   evt.preventDefault();
