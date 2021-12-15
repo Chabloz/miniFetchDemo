@@ -2,7 +2,7 @@
 document.querySelector('body').addEventListener('click' , async evt => {
   // if this is not a link, we skip it
   const link = evt.target;
-  if (link.tagName !== 'A') return;
+  if (link.tagName != 'A') return;
   // if this link is absolute we skip it
   let href = link.getAttribute('href');
   if (href.startsWith('http://') || href.startsWith('https://')) return;
